@@ -30,6 +30,7 @@ window.onscroll = () => {
         }
 
         // if I want to use animation that repeats on scroll I should use this
+        // THIS ONE FOR ANIMATION UP & DOWN
         else{
             sec.classList.remove('show-animate')
         }

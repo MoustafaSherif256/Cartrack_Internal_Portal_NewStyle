@@ -36,6 +36,7 @@ body{
     background: transparent;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 100;
     transition: 0.3s;
 }
@@ -45,7 +46,17 @@ body{
 
 }
 
-.logo{
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+    margin-top: -5px;
+}
+.logo a {
     position: relative;
     font-size: 2.5rem;
     color: var(--text-color);
@@ -81,6 +92,7 @@ section{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
+
 .home{
     display: flex;
     align-items: center;
@@ -104,6 +116,7 @@ section{
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
+    margin-bottom: 1rem;
 }
 
 .home-content h1 span{
@@ -112,7 +125,8 @@ section{
 
 .home-content .text-animate{
     position: relative;
-    width: 32.8rem;
+    width: 28.8rem;
+    margin-bottom: 4rem;
 }
 .home-content .text-animate h3{
     font-size: 3.2rem;
@@ -123,7 +137,6 @@ section{
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0;
-    
 }
 
 .home.show-animate .home-content .text-animate h3{
@@ -189,8 +202,9 @@ section{
 }
 
 .btn-box .btn:nth-child(2){
-    background: transparent;
-    color: var(--main-color);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--main-color);
+    color: #FFF;
 }
 
 .btn-box .btn:nth-child(2):hover{
@@ -288,7 +302,7 @@ section{
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     padding-bottom: 6rem;
 }
 
@@ -302,6 +316,7 @@ section{
 span{
     color: var(--main-color);
 }
+
 .about-img{
     position: relative;
     width: 25rem;
@@ -326,8 +341,8 @@ span{
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border-top: 0.2rem solid var(--bg-color);
-    border-bottom: 0.2rem solid var(--bg-color);
+    border-top: 0.2rem solid var(--second-bg-color);
+    border-bottom: 0.2rem solid var(--second-bg-color);
     border-left: 0.2rem solid var(--main-color);
     border-right: 0.2rem solid var(--main-color);
     animation: aboutSpinner 8s linear infinite;
@@ -358,7 +373,7 @@ span{
     background: var(--bg-color);
 }
 
-.education{
+.listbox{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,34 +382,34 @@ span{
     padding-bottom: 5rem;
 }
 
-.education .education-row{
+.listbox .listbox-row{
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
     gap: 5rem;
 }
 
-.education-row .education-column{
+.listbox-row .listbox-column{
     flex: 1 1 40rem; 
 }
 
-.education-column .title{
+.listbox-column .title{
     position: relative;
     display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
 }
 
-.education-column .education-box{
+.listbox-column .listbox-container{
     position: relative;
     border-left: 0.2rem solid var(--main-color);
 }
 
-.education-box .education-content{
+.listbox-container .listbox-content{
     position: relative;
     padding-left: 2rem;
 }
 
-.education-box .education-content::before{
+.listbox-container .listbox-content::before{
     content: '';
     position: absolute;
     top: 0;
@@ -406,16 +421,15 @@ span{
 }
 
 
-.education-content .content{
+.listbox-content .content {
     position: relative;
-    padding: 1.5rem;
     border: 0.2rem solid var(--main-color);
     border-radius: 0.6rem;
     margin-bottom: 2rem;
     overflow: hidden;
 }
 
-.education-content .content::before{
+.listbox-content .content::before{
     content: '';
     position: absolute;
     top: 0;
@@ -425,28 +439,38 @@ span{
     background: var(--second-bg-color);
     z-index: -1;
     transition: 0.5s;
-
 }
 
-.education-content .content:hover::before{
+.listbox-content .content:hover::before{
     width: 100%;
 }
 
-.education-content .content .year{
+.listbox-content .content a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.listbox-content .content .year{
     font-size: 1.5rem;
     color: var(--main-color);
     padding-bottom: 0.5rem;
 }
 
-.education-content .content .year i{
+.listbox-content .content .year i{
     padding-right: 0.5rem;
 }
 
-.education-content .content h3{
+.listbox-content .content h3{
     font-size: 2rem;
 }
 
-.education-content .content p{
+.listbox-content .content p{
     font-size: 1.6rem;
     padding-top: 0.5rem;
 }
@@ -470,7 +494,7 @@ span{
 }
 
 .skills-row .skills-column{
-    flex:1 1 40rem;
+    flex: 1 1 40rem;
 }
 
 .skills-column .title {
@@ -571,7 +595,6 @@ span{
 
 .content{
     min-height: auto;
-    padding-bottom: 7rem;
 }
 
 .contact h2{
@@ -601,7 +624,6 @@ span{
 
 .contact form .input-box .input-field input,
 .contact form .textarea-field textarea{
-
     width: 100%;
     height: 100%;
     padding: 1.5rem;
@@ -614,7 +636,6 @@ span{
 
 .contact form .input-box .input-field input::placeholder,
 .contact form .textarea-field textarea::placeholder{
-
     color: var(--text-color);
 }
 
@@ -635,8 +656,6 @@ span{
 .contact form .textarea-field textarea:focus~.focus,
 .contact form .textarea-field textarea:valid~.focus{
     width: 100%;
-
-
 }
 
 .contact form .textarea-field{
@@ -709,6 +728,20 @@ span{
     color: var(--main-color);
 }
 
+/* IT Programs CSS */
+.it-section {
+    padding: 10rem 4rem 2rem;
+}
+
+.it-programs .listbox-content .content a {
+    flex-direction: row;
+}
+.it-programs .listbox-content .content a img {
+    height: 64px;
+    width: 64px;
+    margin-right: 2rem;
+}
+
 /* Animation Reload And Scroll */
 .animate{
     position: absolute;
@@ -720,14 +753,12 @@ span{
     z-index: 98;
 }
 
-animate.home-img{
-    width: 50%;
-}
 
 .logo .animate,
 .navbar .animate,
 #menu-icon .animate,
-.home.show-animate .animate {
+.home.show-animate .animate,
+.it-section.show-animate .animate {
     animation: showRight 1s ease forwards;
     animation-delay: calc(0.3s * var(--i));
 }
@@ -739,22 +770,21 @@ animate.home-img{
 }
 
 section:nth-child(odd) .animate.scroll,
-footer .animate.scroll{
+.footer .animate.scroll{
     background: var(--second-bg-color);
 }
 
-.education .education-box .animate.scroll{
+.listbox .listbox-container .animate.scroll{
     width: 105%;
 }
 
 .about.show-animate .animate.scroll,
-.education.show-animate .animate.scroll,
+.listbox.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll{
     transition-delay: calc(0.3s * var(--i));
     width: 0;
-
 }
 /* Breakpoing */
 @media(max-width: 1200px){
@@ -781,7 +811,7 @@ footer .animate.scroll{
     }
 }
 
-@media (max-width:850px){
+@media (max-width: 850px){
     .animate.home-img{
         width: 55%;
 
@@ -821,7 +851,7 @@ footer .animate.scroll{
         width: 100%;
         height: 100%;
         background: var(--bg-color);
-        border-top: 0.1rem solid rgba(0red, 0, 0, 0.2);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
         z-index: -1;
         transition: 0.25s ease;
         transition-delay: 0s;
@@ -844,7 +874,6 @@ footer .animate.scroll{
     .navbar.active a{
         transform: translateX(0);
         transition-delay: 0.25s;
-
     }
 
     /* I'm going to add the img hover later for the HR announcement also for the greeting  */
@@ -872,7 +901,6 @@ footer .animate.scroll{
     .home-sci a{
         width: 38px;
         height: 38px;
-
     }
 }
 
@@ -881,17 +909,13 @@ footer .animate.scroll{
         font-size: 5.2rem;
     }
 
-    .education{
+    .listbox{
         padding: 10rem 4% 5rem 5%;
 
     }
 
     .contact form .input-box .input-field{
         width: 100%;
-    }
-
-    .footer{
-        flex-direction: column-reverse;
     }
 
     .footer{
@@ -926,7 +950,7 @@ footer .animate.scroll{
     0%,
      10%,
       100%{
-        background-position: -33rem 0;
+        background-position: -29rem 0
     }
 
     65%,

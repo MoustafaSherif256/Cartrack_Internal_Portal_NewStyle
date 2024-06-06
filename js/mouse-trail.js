@@ -76,7 +76,6 @@ function animate() {
 window.addEventListener('resize', function () {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
-    init();
 });
 
 window.addEventListener('mouseout', function () {
