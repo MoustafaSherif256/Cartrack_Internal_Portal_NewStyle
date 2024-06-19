@@ -99,7 +99,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: url('../temp/images/movies/bg-little-mermaid.jpg') no-repeat;
+    background: url('../images/our-family/bg-anna-cass.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -161,13 +161,13 @@ header {
 .banner .content h4 span i {
     background: var(--primary);
     color: #ffffff;
-    padding: 0 8px;
+    padding: 0 0px;
     display: inline-block;
     border-radius: 2px;
 }
 
 .banner .content p {
-    font-size: 1em;
+    font-size: 2em;
     font-weight: 300;
     line-height: 1.5em;
     color: #ffffff;
@@ -181,6 +181,7 @@ header {
 .banner .content .button a {
     position: relative;
     display: inline-block;
+    font-size: 1rem;
     margin-right: 10px;
     background: var(--primary);
     color: #ffffff;
