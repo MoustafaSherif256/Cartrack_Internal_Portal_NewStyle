@@ -121,7 +121,7 @@ header {
 
 .content {
     position: relative;
-    max-width: 550px;
+    max-width: 650px;
     display: none;
     visibility: hidden;
     transform: scale(0);
@@ -218,8 +218,8 @@ header {
 
 .carousel {
     position: relative;
-    height: 550px;
-    perspective: 1500px;
+    height: 350px;
+    perspective: 700px;
 }
 
 .carousel .carousel-item {
