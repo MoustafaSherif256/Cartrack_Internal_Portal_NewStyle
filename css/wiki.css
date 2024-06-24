@@ -32,10 +32,10 @@ a{
 }
 .carousel .list .item .content{
     position: absolute;
-    top: 20%;
+    top: 30%;
     width: 1140px;
     max-width: 80%;
-    left: 50%;
+    left: 40%;
     transform: translateX(-50%);
     padding-right: 30%;
     box-sizing: border-box;
