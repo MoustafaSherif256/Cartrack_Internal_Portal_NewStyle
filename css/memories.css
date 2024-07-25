@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-News: sans-serif;
+    font-family: sans-serif;
 }
 
 input{
@@ -35,13 +35,16 @@ h1::before{
 
 @keyframes animate{
     0%{
-        width: 100px;
+        width: 0px;
     }
-    50%{
-        width: 200px;
+    25%{
+        width: 300px;
+    }
+    75%{
+        width: 300px;
     }
     100%{
-        width: 100px;
+        width: 0px;
     }
 }
 
@@ -58,10 +61,11 @@ h1::before{
 
 h3{
     height: 100%;
-    background-color: rgb(221, 221, 221);
+    background-color: white;
+    border-radius: 20px;
     line-height: 60px;
     padding: 0 50px;
-    color: white;
+    color: black;
 }
 
 label{
